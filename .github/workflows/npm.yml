@@ -19,6 +19,12 @@ jobs:
     steps:
       - name: actions version
         uses: actions/checkout@v3
+      - name: run npm ci
+        run: npm install
+      - name: npm installed
+        run: npm ci
+      - name: run npm run lint
+        run: npm run lint
       - name: run npm lint
         run: npm test
   build:
